@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+
+cat had three kitten 
+they are big 
+aaple
+onion 
+cat
+kitten 
+mango 
+pineaple
+what is going on 
+atetermelon: 
+=======
+apple
+mango 
+pineaple
+>>>>>>> parent of c413f3c... is there ay changes

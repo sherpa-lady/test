@@ -1,0 +1,258 @@
+layout management :
+1. flowlayout 
+	flowlayout arranges the components  in a directional flow, either from left to 
+	right or from rght to left. Normally all components are set to one row, according to the  order of diiferent componets. if all componets cant  be fit in one row it will start new row and fit rest in it. 
+
+constructor of Flowlayout
+	FlowLayout()
+	FlowLayout(int align)
+	FlowLayout(int align, int hgap, int vgap)
+	
+
+** values of align : LEFT, RIGHT, CENTER, LEADING, TRAILING 
+
+
+2.gridlayout
+	the grid layout manager is used to manage the componets in arectangle
+ grid which has been divided into equals size rectangles and one components is each rectangle
+ method of gridlayout
+ 	GridLayout()
+	GridLayout(int row, int col)
+	GridLayout(int row, int col, int hgap, int vgap)
+
+3. borderlayout:
+	a borderlayout lays out a container, arranging its cmponents to fit into five regions : MORTH, SOUTH,EAST, WEST, CENTER.
+	for each region it amy conatain no ore than one components. When adding diferent components, we need to specify the orintation of it to 
+	one of the five regions .
+		BorderLayout()
+		BorderLayout(int hgap, int vgap)
+
+
+
+Jlist
+==> JList is a part of java.swing package, it is a components that display a set of object and allow user to select one or more items. JList inherit
+	JComponents class JList is a easy way to dislay array of vector. 
+	JList constructor :
+			jList() : creates blank new list 
+			jList(E [ ]) : created new list with  elements of array
+			jList(ListModel d) : creates new lists with specified list model
+			jList(Vector v) : creates new list with elements of vector 
+
+
+
+jMenu:
+	JMwnuBar,Jmenu,JmenuItems are part of java swing package
+	JmenuBar is implemnets of meu bar. 
+	JmenuBar contains one or more Jmenu objects, when Jmenu objects are seelcted they display a pop up showing one or more JMenuitems.
+consstructor of JMenuBar:
+	JMenuBar() :	creates new menu bar
+	JMenu()	:	creates new menubar with no text
+	JMenu(String name ) :	creates new menu with specfied name .
+	JMenu(Strign name, boolean b ):	creates new menu wtih specified name and boolean value specified as a tear-off menu or not. A tear-off menu
+	can be opened and dragged away from its parents menu bar or menu. 	
+
+JMenu methods :
+add(JMenu c)
+add(Comonents c)
+add(Comonents c, int index)
+add(JMenuItems menuItems)
+add(String s)
+getItems(int index)
+
+verticlaScroll bar & horizontal scroll bar.
+
+table example
+constructor of table
+	JTable()
+	JTable(int rows, int Cols)
+	JTable(obj[][] data, object []column)
+
+method of table
+	addColumn(TableColumn []column)
+	clearSelected
+
+event handing:
+	event : an event is a signal to the program that something has happened. it can be  triggered by typing in a text field, seletcting a item from menu bar. 
+	event may also be triggered when timer expire, hardware or software failure occurs, operaation complete, counter are increased or decreased by a value etc. 
+
+event hanlder: which handled the event
+event handling : 
+event source : from which event occur
+event listener: event listner
+listener interface
+
+
+
+events classses and interface :-
+action event:	 button or menu item is selected
+mouse event : dragging a mouse, click press, release, move 
+key event: key board  inputs
+item event : checkbox or list item is clicked 
+text event : value of text area or textflild is changed
+mouse wheel event :mouse wheel is moved
+window event : window is activated, deeactivated, deiconifies, iconifies,, open , close
+component event: when component is hidden moved, rsizeed or set or visible
+container event: when componeents is removed or added to the container. 
+adjustment event : when scroll bar is manupulated
+focused event: when components loses orr gain keybord focus
+
+listener interfaces :
+	ActionListener
+	MouseListener
+	KeyListener 
+	ItemListener
+	TextListener
+	MouseWheelListener
+	windowListener
+	
+
+ComponetEventListener
+ContainerListener
+AdjustmentListner
+FocuseListner
+
+ 
+ mouseEvent class
+click 
+double click
+mouse up
+mouse down
+
+
+methods 
+mouseReased(MouseEvent e)
+ 
+mouseClicked(MouseEvent e)
+ 
+mouseExited(MouseEvent e)
+ 
+mouseEntered(MouseEvent e)
+ 
+mousePressed(MouseEvent e)
+
+mouseMotionListener:
+mouseDragged(MouseEvent e)
+mouseMoved(mouseEvent e)
+
+___________________________________________________________________________________________________________________________________________
+
+MDI using desktoppane and JINternetFrame
+	MDi stands for multiple document interface. in mddi application one main window is open, multiple window is opened in main window.
+
+JInternalFrame
+JDesktopPane
+JDesktopManger
+----------------------------------------------------------------------------
+q question : -DIfference between java applete and java application 
+
+appletes: java.applete.Applet
+	appletes in java are small and dinami interenet based program, java apples can be only executed within applet framwork. 
+	applet is a java program tat run in web browser, 
+				
+
+				init()
+				  |
+				start()<______
+				  |	     |
+				paint()	     |
+				  |	     |
+				stop()>______|
+				  |
+				destroy()	
+
+			fig: lifecycle of java appletes
+
+
+
+
+executing applet in java: 
+		unlike java programs executing applet is bit different, since applet are net based application, they need specila environment to execute 
+		java provide two standard way to execute an applet :
+	
+	1 using a java enable web browser
+	2. using applet viewer : AppletsViewer is a stand alone command line program from sun to run java applet.it is generaly used by developer for testikng thtei applet before deploying them on a web cites, as a java developer it is prefered option for java applet that do not involve the use web browser. if we are trying to execute a applet in this way
+all we need to do is, insteead of creataing seperate file, for html code we can directly add coment at the begining of java couce code fiel indicating the presence of applet tag within.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JDBC
+
+CallableStatement: just as Connection objects creates  Statement and PrepareStatement object , it also creates the CallableStatemnent object which is used to execute a call to s database store prosedure. 
+
+ResultSet interface : ResultSet object maintain a cursor that point to the current row in the ResultSet. the term result set refer to the row and columns data contain in a ResultSet object. 
+commonly used method of ResultSet interface :
+next();		--> to move next position
+previous();	--> one step ahead
+first();	-->to the first line
+last();		--> to last line
+absolute();	--> to specific position 
+relative();	-->forward or backward from the  current posiotion(-ve for backward +ve for forward)
+			
+types of ResultSet
+1) resultSet.TYPE_FORWARD_ONLY    --> Curssor move forward only 
+2)ResultSet.TYPE_SCROLL_INSENSITIVE	--> ca scroll bakward or forwaard and the resut set is not sensettive to changes made by other to database that 						occur after the result set was created 
+3) ResultSet.TYPE_SCROLL_SENSITIVE  --> cursor can move forward or backward and the result set is sensitive  is changes made by other to databbase that 					occur after the database was created 
+
+
+concurrency of result set:
+	resultSer.CONCUR_READ ONLY  --> creates a read only result set
+	ResultSet.CONCURE_UPDATEABLE	--> creates updateable result set
+
+navigating result set 
+viewing resutl set
+updating result set
+
+
+sql exception method 
+
+board exam
+unit 1
+1.features of java( min 5
+2. oop vs pop
+3. short note
+	bite code, JVM, 
+4. common error in java (min 5
+5. exception 
+
+unit 2
+1. primitive type --> boolean, long short, char,integer, double,float,  except string. syntax, initailization , declaration
+2. narrowing and widening
+3. garbase collection --> resourse clear
+4. comment type 
+5. operator and types , new operator , decision operator difference of loop
+6.  break, continue, return --> jumping statement 
+
+unti 3
+1. oop features - obj and class, data hiding, 
+2. advantage of oop
+3.  constuctor , defult, copy, parametarized
+4. constructor overloading 
+5. overloading vs overwriting 
+6. key wrord --> this,super keyword
+7. static, pass by values, reference 
+8. access specifier 
+9. non static -->inner class and static
+10. recurssion 
+
+
+unit 4
+1. inheritancc
+2. package -- colection of class and interface
+3. finally  
+4. popymorphosm  --> static and dymanic polymorphism
+5. abstract class
+6. abstract and interface diff
+7. abstract vs interface
+8. importing packages and types--> using fully qualified name no need to import at begining , using  import using *
+
+
+unti 5
+1. error handing and exception handling 
+2. 
+
+
+** here the remaining part is to learn git command an dworking directories of git "
+*how stash in it work ?
+   
